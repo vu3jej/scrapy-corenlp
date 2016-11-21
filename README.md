@@ -1,5 +1,8 @@
 # scrapy-corenlp
 
+[![PyPI](https://img.shields.io/pypi/v/scrapy-corenlp.svg?style=flat-square)]()
+[![PyPI](https://img.shields.io/pypi/pyversions/scrapy-corenlp.svg?style=flat-square)]()
+
 A [Scrapy][scrapy] middleware to perform Named Entity Recognition (NER) on response with Stanford CoreNLP.
 
 ## Settings
