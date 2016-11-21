@@ -13,6 +13,6 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.4',
-        'Topic :: Natural Language Processing :: Named Entity Recognition',
+        'Topic :: Text Processing :: Linguistic',
     ]
 )
