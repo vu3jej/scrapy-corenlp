@@ -22,7 +22,7 @@ SPIDER_MIDDLEWARES = {
 An example value of the `NER_FIELD` field after recognising the entities is:
 
 ```json
-{'entities': {'ORGANIZATION': {'Cambridge Lectures Publications Books Images Films Videos Stephen', 'US National Academy of Science', 'Time', 'Royal Society', 'Centre for Theoretical Cosmology', 'Caius College', 'University of Cambridge', 'Leiden University', 'University of California , Santa Cruz', 'NASA'}, 'PERSON': {'Hawking', 'George', 'Annie', 'Isaac Newton', 'Stephen Hawking - Home', 'P. Oesch', 'Sally Tsui Wong-Avery', 'Stephen Hawking', 'Stephen', 'Einstein', 'D. Magee', 'G. Illingworth', 'R. Bouwens', 'Dennis Stanton Avery'}, 'LOCATION': {'Gonville', 'London', 'Cambridge', 'Mars'}}}
+{"entities": {"PERSON": ["Isaac Newton", "Einstein", "Sally Tsui Wong-Avery", "Annie", "Stephen Hawking", "P. Oesch", "Stephen Hawking - Home", "Dennis Stanton Avery", "G. Illingworth", "George", "D. Magee", "Stephen", "Hawking", "R. Bouwens"], "ORGANIZATION": ["Royal Society", "Cambridge Lectures Publications Books Images Films Videos Stephen", "University of California , Santa Cruz", "Caius College", "NASA", "Centre for Theoretical Cosmology", "University of Cambridge", "Time", "Leiden University", "US National Academy of Science"], "LOCATION": ["London", "Mars", "Gonville", "Cambridge"]}}
 ```
 
 [scrapy]: https://scrapy.org/
