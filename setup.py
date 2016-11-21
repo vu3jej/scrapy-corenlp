@@ -8,10 +8,10 @@ setup(
     url='https://github.com/vu3jej/scrapy-corenlp',
     author='Jithesh E J',
     author_email='mail@jithesh.net',
-    license='BSD',
+    license='BSD-2-Clause',
     packages=['scrapy_corenlp'],
     classifiers=[
-        'Development Status :: Alpha',
+        'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.4',
         'Topic :: Natural Language Processing :: Named Entity Recognition',
     ]
