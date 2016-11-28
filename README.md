@@ -6,13 +6,13 @@
 A [Scrapy][scrapy] middleware to perform Named Entity Recognition (NER) on response with Stanford CoreNLP.
 
 ## Settings
-| Option Name     | Value                                                                                                            | Example Value                                                                |
-|-----------------|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| `CORENLP_ENABLED` | Boolean                                                                                                          | `TRUE`                                                                         |
-| `NER_CLASSIFIER`  | Classifier to use                                                                                                | `'./stanford-ner-2015-12-09/classifiers/english.all.3class.distsim.crf.ser.gz'` |
-| `NER_JAR`         | JAR file to use                                                                                                  | `'./scrapy-ner/stanford-ner-2015-12-09/stanford-ner.jar'`                       |
-| `NER_FIELD`       | The field where the NER output will be stored                                                                    | `'entities'`                                                                    |
-| `PTB_TOKENIZER`   | Boolean (PTBTokenizer location must be set in the `CLASSPATH` environment variable. Defaults to `nltk.tokenize.word_tokenize` if not set.) | `TRUE`                                                                         |
+
+| Option                    | Value                                       |
+|---------------------------|---------------------------------------------|
+| STANFORD_NER_ENABLED      | Boolean                                     |
+| STANFORD_NER_CLASSIFIER   | absolute path to CRFClassifier              |
+| STANFORD_NER_JAR          | absolute path to stanford-ner.jar file      |
+| STANFORD_NER_FIELD_OUTPUT | scrapy item field to update the result with |
 
 In your `settings.py` file, add the previously described settings and add `CoreNLP` to your `SPIDER_MIDDLEWARES`, e.g.
 
@@ -22,10 +22,10 @@ SPIDER_MIDDLEWARES = {
 }
 ```
 
-An example value of the `NER_FIELD` field after recognising the entities is:
+An example value of the `STANFORD_NER_FIELD_OUTPUT` field after recognising the entities is:
 
 ```json
-{"entities": {"PERSON": ["Isaac Newton", "Einstein", "Sally Tsui Wong-Avery", "Annie", "Stephen Hawking", "P. Oesch", "Stephen Hawking - Home", "Dennis Stanton Avery", "G. Illingworth", "George", "D. Magee", "Stephen", "Hawking", "R. Bouwens"], "ORGANIZATION": ["Royal Society", "Cambridge Lectures Publications Books Images Films Videos Stephen", "University of California , Santa Cruz", "Caius College", "NASA", "Centre for Theoretical Cosmology", "University of Cambridge", "Time", "Leiden University", "US National Academy of Science"], "LOCATION": ["London", "Mars", "Gonville", "Cambridge"]}}
+{"result": {"DATE": ["1963", "2009", "1979", "1663", "1982"], "ORGANIZATION": ["Royal Society", "US National Academy of Science", "University of California", "Home Home About Stephen The Computer Stephen", "the University of Cambridge", "Sally Tsui Wong-Avery Director of Research", "Theoretical Physics", "Leiden University", "Baby Universe", "Department of Applied Mathematics", "Cambridge Lectures Publications Books Images Films", "Briefer History of Time", "ESA", "NASA", "Brief History of Time", "CBE", "Caius College", "The Universe"], "PERSON": ["P. Oesch", "Einstein", "D. Magee", "Stephen Hawking", "George", "Annie", "Isaac Newton", "G. Illingworth", "Dennis Stanton Avery", "R. Bouwens"], "LOCATION": ["London", "Santa Cruz", "Einstein", "Cambridge", "Gonville"]}}
 ```
 
 [scrapy]: https://scrapy.org/
