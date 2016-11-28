@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='scrapy-corenlp',
-    version='0.1',
+    version='0.1.1',
     description='Scrapy spider middleware :: Stanford CoreNLP Named Entity Recognition',
     url='https://github.com/vu3jej/scrapy-corenlp',
     author='Jithesh E J',
