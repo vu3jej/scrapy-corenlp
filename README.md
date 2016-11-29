@@ -7,12 +7,13 @@ A [Scrapy][scrapy] middleware to perform Named Entity Recognition (NER) on respo
 
 ## Settings
 
-| Option                    | Value                                       |
-|---------------------------|---------------------------------------------|
-| STANFORD_NER_ENABLED      | Boolean                                     |
-| STANFORD_NER_CLASSIFIER   | absolute path to CRFClassifier              |
-| STANFORD_NER_JAR          | absolute path to stanford-ner.jar file      |
-| STANFORD_NER_FIELD_OUTPUT | scrapy item field to update the result with |
+| Option                        | Value                                                         | Example Value                                                                               |
+|-------------------------------|---------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| STANFORD_NER_ENABLED          | Boolean                                                       | `True`                                                                                      |
+| STANFORD_NER_CLASSIFIER       | absolute path to `CRFClassifier`                              | `'/home/jithesh/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz'` |
+| STANFORD_NER_JAR              | absolute path to `stanford-ner.jar` file                      | `'/home/jithesh/stanford-ner-2015-12-09/stanford-ner.jar'`                                  |
+| STANFORD_NER_FIELD_TO_PROCESS | A field or list of Item text fields to use for classification | `['title', 'description']`                                                                  |
+| STANFORD_NER_FIELD_OUTPUT     | scrapy item field to update the result with                   | `'result'`                                                                                  |
 
 In your `settings.py` file, add the previously described settings and add `CoreNLP` to your `SPIDER_MIDDLEWARES`, e.g.
 
