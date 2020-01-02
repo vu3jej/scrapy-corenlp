@@ -26,7 +26,60 @@ SPIDER_MIDDLEWARES = {
 An example value of the `STANFORD_NER_FIELD_OUTPUT` field after recognising the entities is:
 
 ```json
-{"result": {"DATE": ["1963", "2009", "1979", "1663", "1982"], "ORGANIZATION": ["Royal Society", "US National Academy of Science", "University of California", "Home Home About Stephen The Computer Stephen", "the University of Cambridge", "Sally Tsui Wong-Avery Director of Research", "Theoretical Physics", "Leiden University", "Baby Universe", "Department of Applied Mathematics", "Cambridge Lectures Publications Books Images Films", "Briefer History of Time", "ESA", "NASA", "Brief History of Time", "CBE", "Caius College", "The Universe"], "PERSON": ["P. Oesch", "Einstein", "D. Magee", "Stephen Hawking", "George", "Annie", "Isaac Newton", "G. Illingworth", "Dennis Stanton Avery", "R. Bouwens"], "LOCATION": ["London", "Santa Cruz", "Einstein", "Cambridge", "Gonville"]}}
+{
+    "result": {
+        "DATE": [
+            "1963",
+            "2009",
+            "1979",
+            "1663",
+            "1982"
+        ],
+        "ORGANIZATION": [
+            "Royal Society",
+            "US National Academy of Science",
+            "University of California",
+            "Home Home About Stephen The Computer Stephen",
+            "the University of Cambridge",
+            "Sally Tsui Wong-Avery Director of Research",
+            "Theoretical Physics",
+            "Leiden University",
+            "Baby Universe",
+            "Department of Applied Mathematics",
+            "Cambridge Lectures Publications Books Images Films",
+            "Briefer History of Time",
+            "ESA",
+            "NASA",
+            "Brief History of Time",
+            "CBE",
+            "Caius College",
+            "The Universe"
+        ],
+        "PERSON": [
+            "P. Oesch",
+            "Einstein",
+            "D. Magee",
+            "Stephen Hawking",
+            "George",
+            "Annie",
+            "Isaac Newton",
+            "G. Illingworth",
+            "Dennis Stanton Avery",
+            "R. Bouwens"
+        ],
+        "LOCATION": [
+            "London",
+            "Santa Cruz",
+            "Einstein",
+            "Cambridge",
+            "Gonville"
+        ]
+    }
+}
 ```
+
+## License
+
+BSD-2-Clause. See [License](LICENSE.txt) file for more info.
 
 [scrapy]: https://scrapy.org/
